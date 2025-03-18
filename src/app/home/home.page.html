@@ -1,20 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Exercícios ion-alert
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <div id="container">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- <ion-range (ionChange)="onIonChange($event)"></ion-range>
+  <ion-range (ionChange)="onIonChange($event)" [snaps]="true" [ticks]="true" [min]="0" [max]="10"></ion-range>
+
+  <ion-range (ionChange)="onIonChange($event)">
+    <ion-icon slot="start" name="remove-circle-outline"></ion-icon>
+    <ion-icon slot="end" name="add-circle-outline"></ion-icon>
+  </ion-range>
+
+  <ion-label>{{valorRange}}</ion-label> -->
+
+  <ion-toolbar>
+    <ion-title size="large">Calcular Gorjeta</ion-title>
+  </ion-toolbar>
+
+  <ion-item>
+    <ion-input type="number" label="Digite o valor da conta" labelPlacement="floating" [(ngModel)]="valorConta"></ion-input>
+  </ion-item>
+    <ion-range (ionChange)="calcularGorjeta($event)" [snaps]="true" [ticks]="true" [min]="0" [max]="30"></ion-range>
+
+<!--
+  <br><ion-button fill="outline" size="default" color="tertiary" (click)="calcularGorjeta()">calcular gorjeta</ion-button> -->
+
+  <ion-title size="small">Valor da Gorjeta</ion-title>
+  <ion-label>{{gorjeta}}</ion-label><br>
+
+  <ion-title size="small">Valor total da conta</ion-title>
+ <ion-label>{{valorTotalConta}}</ion-label>
+
+ <ion-toolbar>
+  <ion-title size="large">Escolha um valor em metros</ion-title>
+</ion-toolbar>
+
+<ion-range (ionChange)="converterMedidas($event)"></ion-range>
+
+<ion-radio-group [allowEmptySelection]="true" value="turtles" value="tipoMedida" [(ngModel)]="tipoMedida">
+  <ion-radio value="quilometros">Quilometros</ion-radio><br />
+  <ion-radio value="metros">Metros</ion-radio><br />
+</ion-radio-group>
+
+<ion-label>{{convertido}}</ion-label>
+
+<!-- <ion-radio-group [allowEmptySelection]="true" value="turtles" value="tipoUnidade" [(ngModel)]="tipoUnidade">
+  <ion-radio value="milhas">Milhas</ion-radio><br />
+  <ion-radio value="pes">Pés</ion-radio><br />
+</ion-radio-group> -->
+
+</div>
 </ion-content>
