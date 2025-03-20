@@ -24,6 +24,10 @@ export class HomePage {
   quilometros = 0;
   milhas = 0;
 
+  valorRangeAltura = 0;
+  valorRangePeso = 0;
+  valorIMC = 0;
+
   // onIonChange(ev:RangeCustomEvent){
   //   this.valorRange = parseInt(ev.detail.value.toString());
   // }
@@ -51,5 +55,13 @@ export class HomePage {
     }
   }
 
-}
+  calcularIMC(ev: RangeCustomEvent){
+    this.valorRangeAltura = Number(ev.detail.value.toString())/ 100;
+    this.valorRangePeso = Number(ev.detail.value.toString());
 
+    this.valorIMC = this.valorRangePeso/ (this.valorRangeAltura*this.valorRangeAltura);
+
+
+  }
+
+}
