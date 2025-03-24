@@ -72,6 +72,35 @@
     <ion-title size="medium">Resultado da Conversão</ion-title>
   </ion-toolbar>
   <ion-label>{{convertido}}</ion-label>
+<<<<<<< HEAD
+  <br>
+  <br>
+
+
+
+
+  <ion-toolbar>
+    <ion-title size="large">Calculadora de IMC</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-title size="small">Selecione sua altura:</ion-title>
+  </ion-toolbar>
+  <ion-radio-group [allowEmptySelection]="true" value="turtles" value="tipoAltura" [(ngModel)]="tipoAltura">
+    <ion-radio value="metros">metros</ion-radio><br />
+    <ion-radio value="centimetros">centimetros</ion-radio><br />
+  </ion-radio-group>
+  <ion-range (ionChange)="calcularIMC($event)"></ion-range>
+  <ion-label>{{valorRangeAltura}}</ion-label>
+
+  <ion-toolbar>
+    <ion-title size="small">Selecione seu peso (em quilogramas)</ion-title>
+  </ion-toolbar>
+  <ion-radio-group [allowEmptySelection]="true" value="turtles" value="tipoPeso" [(ngModel)]="tipoPeso">
+    <ion-radio value="quilogramas">quilogramas</ion-radio><br />
+    <ion-radio value="libras">libras</ion-radio><br />
+  </ion-radio-group>
+=======
 
 
   <ion-toolbar>
@@ -85,6 +114,7 @@
   <ion-toolbar>
     <ion-title size="small">Selecione seu peso (em quilogramas)</ion-title>
   </ion-toolbar>
+>>>>>>> c952c5ceb7375bb6570c4a00de6e9992271ff434
   <ion-range (ionChange)="calcularIMC($event)"></ion-range>
   <ion-label>{{valorRangePeso}}</ion-label>
 

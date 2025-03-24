@@ -27,6 +27,13 @@ export class HomePage {
   valorRangeAltura = 0;
   valorRangePeso = 0;
   valorIMC = 0;
+<<<<<<< HEAD
+  metros = 0;
+  centimetros = 0;
+  tipoAltura = "";
+  tipoPeso = "";
+=======
+>>>>>>> c952c5ceb7375bb6570c4a00de6e9992271ff434
 
   // onIonChange(ev:RangeCustomEvent){
   //   this.valorRange = parseInt(ev.detail.value.toString());
@@ -56,10 +63,20 @@ export class HomePage {
   }
 
   calcularIMC(ev: RangeCustomEvent){
+<<<<<<< HEAD
+
+
+    if(this.tipoAltura  === "metros" && this.tipoPeso ==="quilogramas"){
+      this.valorRangeAltura = Number(ev.detail.value.toString());
+      this.valorRangePeso = Number(ev.detail.value.toString());
+      this.valorIMC = this.valorRangePeso/ (this.valorRangeAltura*this.valorRangeAltura);
+    }
+=======
     this.valorRangeAltura = Number(ev.detail.value.toString())/ 100;
     this.valorRangePeso = Number(ev.detail.value.toString());
 
     this.valorIMC = this.valorRangePeso/ (this.valorRangeAltura*this.valorRangeAltura);
+>>>>>>> c952c5ceb7375bb6570c4a00de6e9992271ff434
 
 
   }
